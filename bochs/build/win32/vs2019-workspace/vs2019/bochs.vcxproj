@@ -22,40 +22,24 @@
     <ProjectGuid>{A09427D6-1B00-4416-9B29-20E659ED2606}</ProjectGuid>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v142</PlatformToolset>
-    <UseOfMfc>false</UseOfMfc>
-    <CharacterSet>MultiByte</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v142</PlatformToolset>
-    <UseOfMfc>false</UseOfMfc>
-    <CharacterSet>MultiByte</CharacterSet>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v142</PlatformToolset>
-    <UseOfMfc>false</UseOfMfc>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v142</PlatformToolset>
-    <UseOfMfc>false</UseOfMfc>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -65,235 +49,107 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>.\..\obj-debug\</OutDir>
-    <IntDir>.\..\obj-debug\</IntDir>
-    <LinkIncremental>true</LinkIncremental>
-    <GenerateManifest>false</GenerateManifest>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>.\..\obj-debug\</OutDir>
-    <IntDir>.\..\obj-debug\</IntDir>
-    <LinkIncremental>true</LinkIncremental>
-    <GenerateManifest>false</GenerateManifest>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>.\..\obj-release\</OutDir>
-    <IntDir>.\..\obj-release\</IntDir>
-    <LinkIncremental>false</LinkIncremental>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>.\..\obj-release\</OutDir>
-    <IntDir>.\..\obj-release\</IntDir>
-    <LinkIncremental>false</LinkIncremental>
-  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <BuildLog>
-      <Path>$(IntDir)BuildLog-$(TargetName).log</Path>
-    </BuildLog>
-    <Midl>
-      <TypeLibraryName>.\..\obj-debug\bochs.tlb</TypeLibraryName>
-      <HeaderFileName />
-    </Midl>
     <ClCompile>
-      <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>.\..;..\instrument\stubs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeaderOutputFile>.\..\obj-debug\bochs.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\..\obj-debug\</AssemblerListingLocation>
-      <ObjectFileName>.\..\obj-debug\</ObjectFileName>
-      <ProgramDataBaseFileName>.\..\obj-debug\</ProgramDataBaseFileName>
+      <AdditionalIncludeDirectories>..\..\..\..\;..\..\..\..\instrument\stubs\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CONSOLE;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <WarningLevel>Level3</WarningLevel>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <Optimization>Disabled</Optimization>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>VSIDE;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>winmm.lib;comctl32.lib;ws2_32.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>.\..\obj-debug\bochs.exe</OutputFile>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>WinMM.Lib;ComCtl32.Lib;WS2_32.Lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
-      <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <DataExecutionPrevention />
-      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
-    <Bscmake>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\..\obj-debug\bochs.bsc</OutputFile>
-    </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <BuildLog>
-      <Path>$(IntDir)BuildLog-$(TargetName).log</Path>
-    </BuildLog>
-    <Midl>
-      <TypeLibraryName>.\..\obj-debug\bochs.tlb</TypeLibraryName>
-      <HeaderFileName>
-      </HeaderFileName>
-    </Midl>
     <ClCompile>
-      <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>.\..;..\instrument\stubs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeaderOutputFile>.\..\obj-debug\bochs.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\..\obj-debug\</AssemblerListingLocation>
-      <ObjectFileName>.\..\obj-debug\</ObjectFileName>
-      <ProgramDataBaseFileName>.\..\obj-debug\</ProgramDataBaseFileName>
+      <AdditionalIncludeDirectories>..\..\..\..\;..\..\..\..\instrument\stubs\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CONSOLE;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <WarningLevel>Level3</WarningLevel>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <Optimization>Disabled</Optimization>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>VSIDE;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>winmm.lib;comctl32.lib;ws2_32.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>.\..\obj-debug\bochs.exe</OutputFile>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>WinMM.Lib;ComCtl32.Lib;WS2_32.Lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
-      <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <DataExecutionPrevention>
-      </DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
-    <Bscmake>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\..\obj-debug\bochs.bsc</OutputFile>
-    </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <BuildLog>
-      <Path>$(IntDir)BuildLog-$(TargetName).log</Path>
-    </BuildLog>
-    <Midl>
-      <TypeLibraryName>.\..\obj-release\bochs.tlb</TypeLibraryName>
-      <HeaderFileName />
-    </Midl>
     <ClCompile>
-      <Optimization>MaxSpeed</Optimization>
-      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>..\;..\instrument\stubs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <StringPooling>true</StringPooling>
-      <ExceptionHandling />
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeaderOutputFile>.\..\obj-release\bochs.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\..\obj-release\</AssemblerListingLocation>
-      <ObjectFileName>.\..\obj-release\</ObjectFileName>
-      <ProgramDataBaseFileName>.\..\obj-release\</ProgramDataBaseFileName>
+      <AdditionalIncludeDirectories>..\..\..\..\;..\..\..\..\instrument\stubs\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CONSOLE;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <WarningLevel>Level3</WarningLevel>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <CallingConvention>FastCall</CallingConvention>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>VSIDE;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>winmm.lib;comctl32.lib;ws2_32.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>.\..\obj-release\bochs.exe</OutputFile>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\..\obj-release\bochs.pdb</ProgramDatabaseFile>
+      <AdditionalDependencies>WinMM.Lib;ComCtl32.Lib;WS2_32.Lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
-      <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <DataExecutionPrevention />
-      <TargetMachine>MachineX86</TargetMachine>
     </Link>
     <Manifest>
       <AdditionalManifestFiles>..\build\win32\bochs.manifest;%(AdditionalManifestFiles)</AdditionalManifestFiles>
     </Manifest>
-    <Bscmake>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\..\obj-release\bochs.bsc</OutputFile>
-    </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <BuildLog>
-      <Path>$(IntDir)BuildLog-$(TargetName).log</Path>
-    </BuildLog>
-    <Midl>
-      <TypeLibraryName>.\..\obj-release\bochs.tlb</TypeLibraryName>
-      <HeaderFileName>
-      </HeaderFileName>
-    </Midl>
     <ClCompile>
-      <Optimization>MaxSpeed</Optimization>
-      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>..\;..\instrument\stubs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <StringPooling>true</StringPooling>
-      <ExceptionHandling>
-      </ExceptionHandling>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeaderOutputFile>.\..\obj-release\bochs.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\..\obj-release\</AssemblerListingLocation>
-      <ObjectFileName>.\..\obj-release\</ObjectFileName>
-      <ProgramDataBaseFileName>.\..\obj-release\</ProgramDataBaseFileName>
+      <AdditionalIncludeDirectories>..\..\..\..\;..\..\..\..\instrument\stubs\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CONSOLE;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <WarningLevel>Level3</WarningLevel>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <CallingConvention>FastCall</CallingConvention>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>VSIDE;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>winmm.lib;comctl32.lib;ws2_32.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>.\..\obj-release\bochs.exe</OutputFile>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <GenerateDebugInformation>false</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\..\obj-release\bochs.pdb</ProgramDatabaseFile>
+      <AdditionalDependencies>WinMM.Lib;ComCtl32.Lib;WS2_32.Lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
-      <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <DataExecutionPrevention>
-      </DataExecutionPrevention>
     </Link>
     <Manifest>
-      <AdditionalManifestFiles>..\build\win32\bochs.manifest;%(AdditionalManifestFiles)</AdditionalManifestFiles>
+      <AdditionalManifestFiles>..\..\..\..\build\win32\bochs.manifest;%(AdditionalManifestFiles)</AdditionalManifestFiles>
     </Manifest>
-    <Bscmake>
-      <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\..\obj-release\bochs.bsc</OutputFile>
-    </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\bxthread.cc" />
-    <ClCompile Include="..\config.cc" />
-    <ClCompile Include="..\crc.cc" />
-    <ClCompile Include="..\logio.cc" />
-    <ClCompile Include="..\main.cc" />
-    <ClCompile Include="..\osdep.cc" />
-    <ClCompile Include="..\pc_system.cc" />
-    <ClCompile Include="..\plugin.cc" />
+    <ClCompile Include="..\..\..\..\bxthread.cc" />
+    <ClCompile Include="..\..\..\..\config.cc" />
+    <ClCompile Include="..\..\..\..\crc.cc" />
+    <ClCompile Include="..\..\..\..\logio.cc" />
+    <ClCompile Include="..\..\..\..\main.cc" />
+    <ClCompile Include="..\..\..\..\osdep.cc" />
+    <ClCompile Include="..\..\..\..\pc_system.cc" />
+    <ClCompile Include="..\..\..\..\plugin.cc" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\bochs.h" />
-    <ClInclude Include="..\bxthread.h" />
-    <ClInclude Include="..\bxversion.h" />
-    <ClInclude Include="..\config.h" />
-    <ClInclude Include="..\logio.h" />
-    <ClInclude Include="..\osdep.h" />
-    <ClInclude Include="..\pc_system.h" />
+    <ClInclude Include="..\..\..\..\bochs.h" />
+    <ClInclude Include="..\..\..\..\bxthread.h" />
+    <ClInclude Include="..\..\..\..\bxversion.h" />
+    <ClInclude Include="..\..\..\..\config.h" />
+    <ClInclude Include="..\..\..\..\logio.h" />
+    <ClInclude Include="..\..\..\..\osdep.h" />
+    <ClInclude Include="..\..\..\..\pc_system.h" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="..\win32res.rc">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">VSIDE;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">VSIDE;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-    </ResourceCompile>
+    <ResourceCompile Include="..\..\..\..\win32res.rc" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="bx_debug.vcxproj">
